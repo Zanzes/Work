@@ -78,9 +78,7 @@ public class LinkedList
 		{
 			node = node.next;
 			if (node == null)
-			{
 				throw new IndexOutOfBoundsException();
-			}
 		}
 		return node.value;
 		
@@ -130,6 +128,7 @@ public class LinkedList
 		count++;
 	}
 	
+	
 	public void AddToFront(int value)
 	{
 		Node n = new Node(value);
@@ -157,8 +156,11 @@ public class LinkedList
 		public int	value;
 		public Node	next;
 		
-		public Node(int value) {
+		public Node(int value)
+		{
 			this.value = value;
 		}
 	}
+
+
 }

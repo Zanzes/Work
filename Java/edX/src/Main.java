@@ -1,7 +1,10 @@
+import java.io.IOException;
+
+
 public class Main
 {
 
-    public static void main(String[] args)
+    public static void main(String[] args) throws InterruptedException, IOException
     {
         LinkedList list = new LinkedList();
 
@@ -12,6 +15,7 @@ public class Main
         list.AddToBack(5);
 
         PrintList(list);
+        br();
 
         list.Clear();
 
@@ -22,18 +26,50 @@ public class Main
         list.InsertAt(5,4);
 
         PrintList(list);
+        br();
 
         list.RemoveAt(3);
 
         PrintList(list);
+        br();
 
-        System.out.println();
-        System.out.println(list.ValueAt(7));
+        System.out.println(list.ValueAt(2));
+        br();
+        
+        java.util.LinkedList<Integer> list2 = new java.util.LinkedList<Integer>();
+
+        list2.add(1);
+        list2.add(2);
+        list2.add(4);
+
+        PrintList(list2);
+        br();
+        
+        LinkedListUtils.insertSorted(list2, 0);        
+        LinkedListUtils.insertSorted(list2, 3);        
+        LinkedListUtils.insertSorted(list2, 5);
+        
+        PrintList(list2);
+        System.out.print(1234);;
+        
+        br();
+    }
+    
+    static void br()
+    {
+    	System.out.println();
     }
 
-    public static void PrintList(LinkedList list)
+    public static void PrintList(LinkedList list) throws InterruptedException, IOException
     {
-
+    	PrintList(list, true);
+    }
+    
+    public static void PrintList(LinkedList list,boolean clear) throws InterruptedException, IOException
+    {
+    	if (clear)
+		{
+		}
         LinkedList.Node n = list.head;
         int index=0;
 
@@ -50,6 +86,27 @@ public class Main
         System.out.println("Tail: " + list.tail.value);
         System.out.println();
         System.out.println("Count : " + list.getCount());
+
+    }
+    
+
+    public static void PrintList(java.util.LinkedList<Integer> list)
+    {
+        System.out.println("Head: " + list.getFirst());
+        System.out.println();
+
+        int length = list.size();
+        
+		for (int i = 0; i < length; i++)
+		{
+			int value = list.get(i);
+            System.out.println(value + " at index " + i);
+		}
+
+        System.out.println();
+        System.out.println("Tail: " + list.getLast());
+        System.out.println();
+        System.out.println("Count : " + length);
 
     }
 }
