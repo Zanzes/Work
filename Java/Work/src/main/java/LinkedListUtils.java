@@ -5,6 +5,12 @@ public class LinkedListUtils
 
     public static void insertSorted(LinkedList<Integer> list, int value)
     {
+    	if (list == null)
+		{
+    		list = new LinkedList<Integer>();
+    		list.add(value);
+			return;
+		}
         for (int i = 0; i < list.size(); i++)
             if (list.get(i) > value)
             {
@@ -31,7 +37,29 @@ public class LinkedListUtils
 
     public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two)
     {
-
-        return true; // this line is here only so this code will compile if you don't modify it
+    	for (int i = 0; i < one.size(); i++)
+		{
+			int a = one.get(i);
+			boolean same = false;
+			if (two.get(0) == a)
+			{
+				for (int j = 0; j < two.size(); j++)
+				{
+					if (two.get(j) == one.get(i+j))
+					{
+						same = true;
+					}
+					else {
+						same = false;
+						break;
+					}
+				}
+				if (same)
+				{
+					return true;
+				}
+			}
+		}
+    	return false;
     }
 }
