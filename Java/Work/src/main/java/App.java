@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Queue;
 
 /**
  * Hello world!
@@ -8,48 +9,10 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-        LinkedList list = new LinkedList();
-
-        list.AddToBack(4);
-        list.AddToFront(3);
-        list.AddToFront(2);
-        list.AddToFront(1);
-        list.AddToBack(5);
-
-        PrintList(list);
-        br();
-
-        list.Clear();
-
-        list.AddToFront(4);
-        list.AddToFront(2);
-        list.InsertAt(1,0);
-        list.InsertAt(3,2);
-        list.InsertAt(5,4);
-
-        PrintList(list);
-        br();
-
-        list.RemoveAt(3);
-
-        PrintList(list);
-        br();
-
-        System.out.println(list.ValueAt(2));
-        br();
-        
-        java.util.LinkedList<Integer> list2 = new java.util.LinkedList<Integer>();
-
-        list2.add(1);
-        list2.add(2);
-        list2.add(4);
-
-        PrintList(list2);
-        br();
-        
-        
-        PrintList(list2);        
-        br();
+    	Queue<HtmlTag> tagsFromHtmlFile = HtmlReader.getTagsFromHtmlFile("test3.html");
+		System.out.println(tagsFromHtmlFile);		
+		br();
+		System.out.println(HtmlValidator.isValidHtml(tagsFromHtmlFile));
     }
     
     static void br()

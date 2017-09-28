@@ -2,54 +2,87 @@ import java.util.LinkedList;
 
 public class LinkedListUtils
 {
-
-    public static void insertSorted(LinkedList<Integer> list, int value)
-    {
-    	if (list == null)
+	public static void insertSorted(LinkedList<Integer> list, int value)
+	{
+		if (list == null)
 		{
-    		list = new LinkedList<Integer>();
-    		list.add(value);
+			list = new LinkedList<Integer>();
+			list.add(value);
 			return;
 		}
-        for (int i = 0; i < list.size(); i++)
-            if (list.get(i) > value)
-            {
-                list.add(i, value);
-                return;
-            }
-        list.addLast(value);
-    }
+		for (int i = 0; i < list.size(); i++)
+			if (list.get(i) > value)
+			{
+				list.add(i, value);
+				return;
+			}
+		list.addLast(value);
+	}
 
-    public static void removeMaximumValues(LinkedList<String> list, int N)
-    {
-    	for (int i = 0;i < N;i++)
-    	{
-    	String x = null;
-	    	for (String string : list)
+	public static void removeMaximumValues(LinkedList<String> list, int N)
+	{
+		if (list == null)
+		{
+			return;
+		}
+		int runs = N;
+		int size = list.size();
+		if (size < runs)
+		{
+			runs = size;
+		}
+		for (int i = 0; i < runs; i++)
+		{
+			String x = "";
+			for (String string : list)
 			{
 				if (string.compareTo(x) > 0)
 				{
 					x = string;
 				}
 			}
-    	}
-    }
 
-    public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two)
-    {
-    	for (int i = 0; i < one.size(); i++)
+			while(list.remove(x));
+		}
+	}
+
+	public static boolean containsSubsequence(LinkedList<Integer> one, LinkedList<Integer> two)
+	{
+		if (one == null)
 		{
-			int a = one.get(i);
+			return false;
+		}
+		if (two == null)
+		{
+			return false;
+		}
+		int oneLen = one.size();
+		int twoLen = two.size();
+		if (oneLen < 1)
+		{
+			return false;
+		}
+		if (twoLen < 1)
+		{
+			return false;
+		}
+		for (int i = 0; i < oneLen; i++)
+		{
 			boolean same = false;
-			if (two.get(0) == a)
+			if (two.get(0) == one.get(i))
 			{
-				for (int j = 0; j < two.size(); j++)
+				if (oneLen - i < twoLen)
 				{
-					if (two.get(j) == one.get(i+j))
+					return false;
+				}
+				for (int j = 0; j < twoLen; j++)
+				{
+					if (two.get(j) == one.get(i + j))
 					{
 						same = true;
 					}
-					else {
+					else
+					{
 						same = false;
 						break;
 					}
@@ -60,6 +93,6 @@ public class LinkedListUtils
 				}
 			}
 		}
-    	return false;
-    }
+		return false;
+	}
 }
