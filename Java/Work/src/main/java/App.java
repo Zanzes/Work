@@ -1,18 +1,19 @@
 import java.io.IOException;
-import java.util.Queue;
+import java.util.List;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-    	Queue<HtmlTag> tagsFromHtmlFile = HtmlReader.getTagsFromHtmlFile("test3.html");
-		System.out.println(tagsFromHtmlFile);		
-		br();
-		System.out.println(HtmlValidator.isValidHtml(tagsFromHtmlFile));
+    	List<Sentence> list = Analyzer.readFile("test9.txt");
+    	if (list == null)
+		{
+			System.out.println("Error");
+		}
+    	for (Sentence sentence : list)
+		{
+			System.out.println(sentence.text + "\t---is at "+sentence.score);
+		}
     }
     
     static void br()
@@ -49,7 +50,6 @@ public class App
 
     }
     
-
     public static void PrintList(java.util.LinkedList<Integer> list)
     {
         System.out.println("Head: " + list.getFirst());

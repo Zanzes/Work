@@ -6,4 +6,6 @@ org.eclipse.debug.ui.errorColor=255,0,0
 org.eclipse.debug.ui.inColor=0,0,0
 org.eclipse.debug.ui.outColor=0,0,0
 org.eclipse.debug.ui.save_dirty_editors_before_launch=always
+pref_state_memento.org.eclipse.debug.ui.DebugVieworg.eclipse.debug.ui.DebugView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<DebugViewMemento org.eclipse.debug.ui.BREADCRUMB_DROPDOWN_AUTO_EXPAND\="false"/>
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
 preferredTargets=default\:default|
