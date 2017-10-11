@@ -16,6 +16,8 @@
 	<item value="759" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_height"/>
 	<item value="filter_imports;" key="filters_last_used"/>
 	<item value="4" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
 		<item value="true" key="group_libraries"/>

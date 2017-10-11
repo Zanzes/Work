@@ -9,4 +9,8 @@
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="HtmlReader"/>
+<fullyQualifiedTypeName name="HtmlTag"/>
+<fullyQualifiedTypeName name="HtmlValidator"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>
