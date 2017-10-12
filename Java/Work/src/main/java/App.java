@@ -5,15 +5,8 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-    	List<Sentence> list = Analyzer.readFile("test9.txt");
-    	if (list == null)
-		{
-			System.out.println("Error");
-		}
-    	for (Sentence sentence : list)
-		{
-			System.out.println(sentence.text + "\t---is at "+sentence.score);
-		}
+    	Analyzer analyzer = new Analyzer();
+    	analyzer.main(new String[] {"reviews.txt"});
     }
     
     static void br()
