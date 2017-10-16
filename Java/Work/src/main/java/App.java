@@ -1,12 +1,10 @@
 import java.io.IOException;
-import java.util.List;
 
 public class App 
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-    	Analyzer analyzer = new Analyzer();
-    	analyzer.main(new String[] {"reviews.txt"});
+    	Analyzer.main(new String[] {"reviews.txt"});
     }
     
     static void br()

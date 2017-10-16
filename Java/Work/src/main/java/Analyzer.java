@@ -11,10 +11,6 @@ import java.util.StringTokenizer;
 
 public class Analyzer
 {
-	
-	/*
-	 * Implement this method in Part 1
-	 */
 	public static List<Sentence> readFile(String filename)
 	{
 		java.util.LinkedList<Sentence> list = new java.util.LinkedList<Sentence>();
@@ -54,9 +50,6 @@ public class Analyzer
 		return null;
 	}
 	
-	/*
-	 * Implement this method in Part 2
-	 */
 	public static Set<Word> allWords(List<Sentence> sentences)
 	{
 		LinkedList<Word> list = new LinkedList<Word>();
@@ -100,9 +93,6 @@ public class Analyzer
 		return list;
 	}
 	
-	/*
-	 * Implement this method in Part 3
-	 */
 	public static Map<String, Double> calculateScores(Set<Word> words)
 	{
 		HashMap<String, Double> map = new HashMap<String, Double>();
@@ -114,38 +104,37 @@ public class Analyzer
 		
 	}
 	
-	/*
-	 * Implement this method in Part 4
-	 */
 	public static double calculateSentenceScore(Map<String, Double> wordScores, String sentence)
 	{
 		double score = 0;
-		if (sentence != null)
+		int devisor = 0;
+		if (sentence != null && wordScores != null)
 		{
-			HashMap<String, Double> map = new HashMap<String, Double>();
-			String token;
-			StringTokenizer tokenizer = new StringTokenizer(sentence);
+			StringTokenizer tokenizer = new StringTokenizer(RemoveInvalid(sentence));
+			devisor = tokenizer.countTokens();
 			while (tokenizer.hasMoreTokens())
 			{
-				token = tokenizer.nextToken();
-				if (map.containsKey(token))
-					try
-					{
-						score += map.get(token);
-					}
-					catch (Exception e)
-					{
-						e.printStackTrace();
-					}
+				String token = tokenizer.nextToken();
+				if (wordScores.containsKey(token))
+					score += (double)wordScores.get(token) / devisor;
 			}
 		}
 		return score;
 	}
 	
-	/*
-	 * This method is here to help you run your program. Y You may modify it as
-	 * needed.
-	 */
+	static String RemoveInvalid(String input)
+	{
+		StringTokenizer tokenizer = new StringTokenizer(input);
+		String out = "";
+		while (tokenizer.hasMoreTokens())
+		{
+			String token = tokenizer.nextToken().toLowerCase();
+			if (Character.isAlphabetic(token.charAt(0)))
+				out += token + " ";
+		}
+		return out.trim();
+	}
+	
 	public static void main(String[] args)
 	{
 		if (args.length == 0)
