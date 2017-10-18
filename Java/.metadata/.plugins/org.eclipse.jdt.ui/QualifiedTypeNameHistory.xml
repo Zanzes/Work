@@ -29,6 +29,10 @@
 <fullyQualifiedTypeName name="Analyzer"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="sun.management.counter.Variability"/>
 <fullyQualifiedTypeName name="E"/>
+<fullyQualifiedTypeName name="sun.launcher.resources.launcher"/>
+<fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
 <fullyQualifiedTypeName name="BinarySearchTree.Node"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ"/>
 </qualifiedTypeNameHistroy>
