@@ -1,34 +1,30 @@
 import java.io.IOException;
-import java.util.Map.Entry;
-import java.util.PriorityQueue;
-import java.util.Set;
-import java.util.TreeMap;
 
 public class App 
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-    	TreeMap<String, PriorityQueue<Integer>> map= new TreeMap<>();
-    	PriorityQueue<Integer> queueA = new PriorityQueue<>();
-    	PriorityQueue<Integer> queueB = new PriorityQueue<>();
-    	queueA.add(1);
-    	queueA.add(2);
-    	queueB.add(1);
-    	queueB.add(2);
-    	map.put("First", queueA);
-    	map.put("Second", queueB);
-    	
-    	TreeMap<String, Integer> ret = MovieRatingsProcessor.removeAllRatingsBelow(map, 3);
-    	Set<Entry<String, Integer>> entrySet = ret.entrySet();
-    	if (entrySet.size() <= 0)
-		{
-    		System.out.println("NONE!");			
-		}
-    	for (Entry<String, Integer> entry : entrySet)
-		{
-			System.out.println(entry.getKey()+" : "+entry.getValue());
-		}
-    	
+    	Graph graph =new DirectedGraph();
+    	Node newNode = new Node("first");
+		graph.addNode(newNode);
+    	Node newNode2 = new Node("second");
+		graph.addNode(newNode2);
+    	Node newNode3 = new Node("third");
+		graph.addNode(newNode3);
+    	Node newNode4 = new Node("fourth");
+		graph.addNode(newNode4);
+    	Node newNode5 = new Node("fifth");
+		graph.addNode(newNode5);
+    	Node newNode6 = new Node("sixth");
+		graph.addNode(newNode6);
+		graph.addEdgeFromTo(newNode, newNode2);
+		graph.addEdgeFromTo(newNode2, newNode3);
+		graph.addEdgeFromTo(newNode3, newNode4);
+		graph.addEdgeFromTo(newNode4, newNode5);
+		graph.addEdgeFromTo(newNode3, newNode5);
+		graph.addEdgeFromTo(newNode, newNode6);
+		graph.addEdgeFromTo(newNode6, newNode5);
+		System.out.println(GraphUtils.minDistance(graph, newNode.element, newNode5.element));
     }
     
     static void br()
