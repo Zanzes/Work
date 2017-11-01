@@ -24,7 +24,7 @@ public class App
 		graph.addEdgeFromTo(newNode3, newNode5);
 		graph.addEdgeFromTo(newNode, newNode6);
 		graph.addEdgeFromTo(newNode6, newNode5);
-		System.out.println(GraphUtils.minDistance(graph, newNode.element, newNode5.element));
+		System.out.println(GraphUtils.nodesWithinDistance(graph, "first", 1));
     }
     
     static void br()

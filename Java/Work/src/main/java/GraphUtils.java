@@ -18,7 +18,7 @@ public class GraphUtils
 		if (node == target)
 			return 0;
 		remaining.add(node);
-		int i =0;
+		int i = 0;
 		while (!remaining.isEmpty())
 		{
 			i++;
@@ -28,7 +28,7 @@ public class GraphUtils
 			{
 				remaining.remove(rem);
 				visited.add(rem);
-				Set<Node> nodes = targets(graph,rem);
+				Set<Node> nodes = targets(graph, rem);
 				for (Node active : nodes)
 				{
 					if (active == target)
@@ -52,18 +52,39 @@ public class GraphUtils
 	
 	public static Set<String> nodesWithinDistance(Graph graph, String src, int distance)
 	{
+		if (distance <= 0 || src == null || graph == null || !graph.containsElement(src))
+			return null;
 		
-		/* IMPLEMENT THIS METHOD! */
+		Node node = graph.getNode(src);
+		LinkedList<Node> remaining = new LinkedList<>();
+		LinkedList<Node> visited = new LinkedList<>();
+		remaining.add(node);
 		
-		return null; // this line is here only so this code will compile if you don't modify it
+		while (remaining.size() > 0 && distance+1 > 0)
+		{
+			LinkedList<Node> newRemaining = new LinkedList<>();
+			for (Node n : remaining)
+			{
+				if (!visited.contains(n) && n != node)
+					visited.add(n);
+				for (Node node2 : targets(graph,n))
+					if (!visited.contains(node2))
+						newRemaining.add(node2);
+			}
+			remaining.addAll(newRemaining);
+			distance--;
+		}
+		
+		Set<String> set = new HashSet<String>();
+		for (Node n : visited)
+			set.add(n.element);
+		
+		return set;
 	}
 	
 	public static boolean isHamiltonianPath(Graph g, List<String> values)
 	{
-		
-		/* IMPLEMENT THIS METHOD! */
-		
-		return true; // this line is here only so this code will compile if you don't modify it
+		return true;
 	}
 	
 }
