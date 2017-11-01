@@ -30,7 +30,8 @@ public class Pendulum
 		
 		angle += aVel;
 		aVel += aAcc;
-		aVel *= 0.983;
+		aVel *= 0.992;
+		//aVel *= 0.983;
 	}
 	
 	public void draw()
