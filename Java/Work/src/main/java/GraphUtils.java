@@ -1,4 +1,3 @@
-
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
@@ -60,14 +59,14 @@ public class GraphUtils
 		LinkedList<Node> visited = new LinkedList<>();
 		remaining.add(node);
 		
-		while (remaining.size() > 0 && distance+1 > 0)
+		while (remaining.size() > 0 && distance + 1 > 0)
 		{
 			LinkedList<Node> newRemaining = new LinkedList<>();
 			for (Node n : remaining)
 			{
 				if (!visited.contains(n) && n != node)
 					visited.add(n);
-				for (Node node2 : targets(graph,n))
+				for (Node node2 : targets(graph, n))
 					if (!visited.contains(node2))
 						newRemaining.add(node2);
 			}
@@ -84,7 +83,32 @@ public class GraphUtils
 	
 	public static boolean isHamiltonianPath(Graph g, List<String> values)
 	{
+		if (g == null || values == null || values.size() < 2)
+			return false;
+		LinkedList<Node> visited = new LinkedList<>();
+		for (int i = 0; i < values.size(); i++)
+		{
+			Node b = g.getNode(values.get(i));
+			if (b == null)
+				return false;
+			if (i != values.size() - 1)
+			{
+				if (visited.contains(b))
+					return false;
+			}
+			else if (b != visited.getFirst())
+				return false;
+			if (visited.size() != 0)
+			{
+				Node a = visited.peekLast();
+				if (!targets(g, a).contains(b))
+					return false;
+			}
+			visited.add(b);
+			
+		}
+		if (visited.size() != g.numNodes+1)
+			return false;
 		return true;
 	}
-	
 }
