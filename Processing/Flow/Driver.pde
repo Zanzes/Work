@@ -1,7 +1,8 @@
 class Driver extends Visible
 {
-    float maxSpeed = 0.1;
+    float maxSpeed = 10;
     float maxForce = 0.1;
+    float closestDistance = 100;
     
     public Driver()
     {
@@ -15,13 +16,32 @@ class Driver extends Visible
     
     public void update()
     {
-        applyForce(PVector.sub(mPos,pos).normalize());
         if (!isStatic)
         {
             vel.add(acc);
             acc = new PVector();
             pos.add(vel);
         }
+    }
+    
+    public void seek(PVector target)
+    {
+        PVector desierd = PVector.sub(target,pos);
+        float mag = desierd.mag();
+            if (mag > maxSpeed)
+            {
+                desierd.setMag(maxSpeed);
+            }
+        if (mag > closestDistance)
+        {
+        }
+        else
+        {
+            vel.normalize();
+        }
+            PVector steering = PVector.sub(desierd,vel);
+            steering.limit(maxForce);
+            applyForce(steering);
     }
     
     public void display()
@@ -38,5 +58,10 @@ class Driver extends Visible
         vertex( r(), height/2);
         endShape();
         popMatrix();
+    }
+    
+    public PVector getBreake()
+    {
+        return PVector.sub(pos,vel);
     }
 }
