@@ -1,4 +1,5 @@
 Driver d;
+Field f = new Field();
 
 void settings()
 {
@@ -18,10 +19,11 @@ void draw()
     background(255);
     
     d.update();
+    d.seek(mPos);
     d.display();
     if(mouseButton == RIGHT)
     {
         d.applyForce(new PVector(1,1).normalize());
     }
-      
+    f.drawField();
 }

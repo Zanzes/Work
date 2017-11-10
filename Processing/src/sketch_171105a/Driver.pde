@@ -46,6 +46,7 @@ class Driver extends Visible
     
     public void display()
     {
+        println(pos);
         float theta = vel.heading() + radians(90);
         fill(127);
         stroke(0);
