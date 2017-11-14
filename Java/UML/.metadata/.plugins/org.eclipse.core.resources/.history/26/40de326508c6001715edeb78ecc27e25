@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_JdvzcMYEEeenl8-q7Hz3EA" name="NewModel">
+  <packageImport xmi:id="_nfM_cMYFEeenl8-q7Hz3EA">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZCCnwMYEEeenl8-q7Hz3EA" name="MapSite" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ByOAQMYGEeenl8-q7Hz3EA" name="Door" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_w4f0oMYGEeenl8-q7Hz3EA" name="Room" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_yj0G8MYGEeenl8-q7Hz3EA" name="Wall" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_3dB4oMYGEeenl8-q7Hz3EA" name="Mace" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6ejI4MYGEeenl8-q7Hz3EA" name="MaceGame" visibility="public"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_6xZMYMYGEeenl8-q7Hz3EA" name="RandomizedMaceGame" visibility="public"/>
+</uml:Model>
