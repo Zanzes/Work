@@ -24,6 +24,8 @@
 	<classpathentry kind="lib" path="homework4-tests.jar"/>
 	<classpathentry kind="lib" path="homework5-tests.jar"/>
 	<classpathentry kind="lib" path="homework6-tests.jar"/>
+	<classpathentry kind="lib" path="homework7-tests.jar"/>
+	<classpathentry kind="lib" path="homework8-tests.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

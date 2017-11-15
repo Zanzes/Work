@@ -1,8 +1,8 @@
-class Tree extends GameObject
+class TreeGO extends GameObject
 {    
-    public Tree() { }
+    public TreeGO() { }
     
-    public Tree(PVector initial)
+    public TreeGO(PVector initial)
     {
         super(initial);
     }
@@ -17,7 +17,7 @@ class Tree extends GameObject
     void buildTree()
     {
         translate(loc.x,loc.y);
-        branch(100);
+        branch(200);
     }
     
     void branch(float len)
@@ -27,7 +27,7 @@ class Tree extends GameObject
         line(0,0,0,-len);
         translate(0,-len);
         
-        float nl = (len/3)*2;
+        float nl = (len/4)*2;
         
         if (len > 5)
         {

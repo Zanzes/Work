@@ -2,7 +2,7 @@ LSystem ls;
 Turtle t;
 PVector Center;
 PVector BottomCenter;
-int mode=5; // 1 -> Tree, 2 -> Squares, 3 -> Triangles, 4 -> Inside, 5 -> RT
+int mode=1; // 1 -> Tree, 2 -> Squares, 3 -> Triangles, 4 -> Inside, 5 -> RT
 
 void setup()
 {    

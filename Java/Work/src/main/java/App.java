@@ -4,27 +4,9 @@ public class App
 {
     public static void main(String[] args) throws InterruptedException, IOException
     {
-    	Graph graph =new DirectedGraph();
-    	Node newNode = new Node("first");
-		graph.addNode(newNode);
-    	Node newNode2 = new Node("second");
-		graph.addNode(newNode2);
-    	Node newNode3 = new Node("third");
-		graph.addNode(newNode3);
-    	Node newNode4 = new Node("fourth");
-		graph.addNode(newNode4);
-    	Node newNode5 = new Node("fifth");
-		graph.addNode(newNode5);
-    	Node newNode6 = new Node("sixth");
-		graph.addNode(newNode6);
-		graph.addEdgeFromTo(newNode, newNode2);
-		graph.addEdgeFromTo(newNode2, newNode3);
-		graph.addEdgeFromTo(newNode3, newNode4);
-		graph.addEdgeFromTo(newNode4, newNode5);
-		graph.addEdgeFromTo(newNode3, newNode5);
-		graph.addEdgeFromTo(newNode, newNode6);
-		graph.addEdgeFromTo(newNode6, newNode5);
-		System.out.println(GraphUtils.nodesWithinDistance(graph, "first", 1));
+    	String[] arg = new String[1];
+    	arg[0] = "books.txt";
+    	Main.main(arg);
     }
     
     static void br()

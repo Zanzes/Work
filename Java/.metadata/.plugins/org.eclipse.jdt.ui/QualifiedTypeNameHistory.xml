@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
-<fullyQualifiedTypeName name="LinkedListUtils"/>
-<fullyQualifiedTypeName name="javax.swing.text.AbstractDocument.BranchElement"/>
-<fullyQualifiedTypeName name="java.io.Console"/>
-<fullyQualifiedTypeName name="jline.console.ConsoleReader"/>
-<fullyQualifiedTypeName name="HtmlReader"/>
-<fullyQualifiedTypeName name="HtmlTag"/>
 <fullyQualifiedTypeName name="HtmlValidator"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.stream.Stream"/>
 <fullyQualifiedTypeName name="java.nio.file.Paths"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="Word"/>
 <fullyQualifiedTypeName name="Sentence"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
@@ -26,19 +17,16 @@
 <fullyQualifiedTypeName name="com.sun.jndi.url.iiopname.iiopnameURLContextFactory"/>
 <fullyQualifiedTypeName name="BinarySearchTree.Node"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.sun.corba.se.impl.encoding.OSFCodeSetRegistry.Entry"/>
 <fullyQualifiedTypeName name="UserMovieRating"/>
 <fullyQualifiedTypeName name="MovieRatingsParser"/>
 <fullyQualifiedTypeName name="MovieRatingsProcessor"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.TreeMap"/>
 <fullyQualifiedTypeName name="BreadthFirstSearch"/>
 <fullyQualifiedTypeName name="sun.management.counter.Variability"/>
 <fullyQualifiedTypeName name="jdk.nashorn.internal.ir.ReturnNode"/>
 <fullyQualifiedTypeName name="Edge"/>
-<fullyQualifiedTypeName name="LinkedList"/>
 <fullyQualifiedTypeName name="sun.util.calendar.Gregorian"/>
 <fullyQualifiedTypeName name="Graph"/>
 <fullyQualifiedTypeName name="UndirectedGraph"/>
@@ -48,9 +36,7 @@
 <fullyQualifiedTypeName name="org.hamcrest.core.IsInstanceOf"/>
 <fullyQualifiedTypeName name="GraphUtils"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="Node"/>
 <fullyQualifiedTypeName name="Pendulum"/>
@@ -58,4 +44,20 @@
 <fullyQualifiedTypeName name="processing.core.PConstants"/>
 <fullyQualifiedTypeName name="processing.core.PVector"/>
 <fullyQualifiedTypeName name="processing.core.PApplet"/>
+<fullyQualifiedTypeName name="Maze"/>
+<fullyQualifiedTypeName name="MazeGame"/>
+<fullyQualifiedTypeName name="Wall"/>
+<fullyQualifiedTypeName name="MapSite"/>
+<fullyQualifiedTypeName name="Room"/>
+<fullyQualifiedTypeName name="Main"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="LinkedList"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="Book"/>
 </qualifiedTypeNameHistroy>
